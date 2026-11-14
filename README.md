@@ -8,11 +8,13 @@ Desenvolvedora Python em formação e estudante de Análise e Desenvolvimento de
 
 Consulta de CNPJ com histórico: guarda cada consulta e mostra quando a situação cadastral de uma empresa mudou, por exemplo de ATIVA para BAIXADA.
 
+**No ar:** [consulta-cnpj-pfpj.onrender.com](https://consulta-cnpj-pfpj.onrender.com) (plano grátis: o primeiro acesso depois de um tempo parado leva cerca de 1 minuto).
+
 - Backend em FastAPI, com site (HTML montado no servidor, modo escuro) e linha de comando.
 - SQLAlchemy com SQL escrito à mão; SQLite no desenvolvimento e PostgreSQL (Supabase) em produção; histórico append-only.
 - Integração resiliente: timeout, novas tentativas com espera crescente e uma segunda API pública como reserva.
 - Coleta diária das empresas acompanhadas, agendada no GitHub Actions e idempotente.
-- Assistente com LLM: perguntas em português respondidas por ferramentas que só leem o banco, com o Claude ou com um modelo grátis do OpenRouter; limite diário e registro de tokens por pergunta.
+- Assistente com LLM, no site e na linha de comando: perguntas em português respondidas por ferramentas que só leem o banco, com o Claude ou com um modelo grátis do OpenRouter; limite diário e registro de tokens por pergunta.
 - 438 testes no CI, com os testes de banco rodando nos dois bancos.
 
 ### [classificador-avaliacoes](https://github.com/SudoMary/classificador-avaliacoes)
