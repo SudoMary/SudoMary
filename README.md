@@ -15,18 +15,20 @@ Consulta de CNPJ com histórico: guarda cada consulta e mostra quando a situaç�
 - Integração resiliente: timeout, novas tentativas com espera crescente e uma segunda API pública como reserva.
 - Coleta diária das empresas acompanhadas, agendada no GitHub Actions e idempotente.
 - Assistente com LLM, no site e na linha de comando: perguntas em português respondidas por ferramentas que só leem o banco, com o Claude ou com um modelo grátis do OpenRouter; limite diário e registro de tokens por pergunta.
-- 438 testes no CI, com os testes de banco rodando nos dois bancos.
+- 445 testes no CI, com os testes de banco rodando nos dois bancos.
 
 ### [classificador-avaliacoes](https://github.com/SudoMary/classificador-avaliacoes)
 
 Classifica avaliações de clientes em português (dataset público da Olist): o motivo da reclamação e se a loja precisa responder.
+
+**No ar:** [classificador-avaliacoes.onrender.com](https://classificador-avaliacoes.onrender.com): cole uma avaliação e veja as regras e o LLM lado a lado.
 
 - Amostra estratificada por nota, com conjuntos separados de desenvolvimento e teste.
 - Guia de rotulagem e ferramenta de rotulagem e revisão na linha de comando.
 - Métricas implementadas do zero: precisão, revocação e F1 por categoria, F1 macro e matriz de confusão.
 - Linha de base por regras: 78,7% de acerto no motivo, contra 41,3% de "sempre a classe mais comum".
 - Classificador com LLM grátis (Nemotron 3.5 Super, via OpenRouter): 96,0% de acerto no motivo, custo zero, 15 avaliações por requisição e cache das respostas.
-- Python só com a biblioteca padrão; 111 testes, nenhum chama a rede.
+- Classificador e medição só com a biblioteca padrão; site em FastAPI; 126 testes, nenhum chama a rede.
 
 ## Ferramentas
 
